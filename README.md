@@ -12,7 +12,7 @@ Before running the application, run the `npm install` script in the *client_web*
     - To run the web version of the app, run the `ng serve` script in the *client_web* directory. The client will run on **http://localhost:4200/**.
     
 - Mobile app:
-    - Download and open the scrabble-mobile.apk file.
+    - Open the scrabble-mobile.apk file.
     - If you have an Android emulator, you can run the app on the emulator by running the main.dart file in client_mobile > lib.
     
 ## Login and user profile
