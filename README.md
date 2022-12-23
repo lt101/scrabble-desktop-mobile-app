@@ -2,6 +2,7 @@
 
 ## About
 This is a continuation of the web app version of the popular board game Scrabble created in the context of an academic project (see https://github.com/lt101/scrabble-web-app for details). This version includes a multiplayer desktop app built with Electron.js and a mobile app written in Flutter. It implements Socket.io for client-server communication and a REST API for persistance with a MongoDB database.
+![](images/scrabble-desktop-game-dark.png)
 
 ## How To Use
 Before running the application, run the `npm install` script in the *client_web* and *server* directories, as well as *flutter pub get* in *client_mobile* to install necessary dependencies.
