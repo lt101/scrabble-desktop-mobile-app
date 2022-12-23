@@ -1,0 +1,18 @@
+.mat-raised-button {
+    min-width: 100px;
+}
+
+.exchange-button {
+    background-color: rgb(1, 52, 114);
+    height: 60px;
+    border-radius: 20px;
+    color: white;
+    &:disabled {
+        opacity: 0.5;
+        background-color: rgb(1, 52, 114);
+        color: white;
+    }
+    &:hover {
+        background-color: rgb(1, 71, 156);
+    }
+}

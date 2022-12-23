@@ -1,0 +1,70 @@
+.control-panel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 150px;
+}
+
+.buttons {
+    width: 50%;
+    min-width: 200px;
+    .button-component {
+        margin: 0.5rem;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        button {
+            width: 100%;
+        }
+    }
+}
+.exchange-pass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    left: 15px;
+    top: 10px;
+    height: 90px;
+}
+.clue-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    bottom: 20px;
+}
+
+.info-button {
+    position: relative;
+    bottom: 90px;
+    left: 60px;
+    background-color: rgb(5, 68, 93);
+    border: 3px solid #00d7c3;
+    border-radius: 50%;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    color: #00d7c3;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.info-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+}
+
+::ng-deep .mat-tooltip {
+    font-size: larger;
+}
+
+#surrender {
+    position: relative;
+    bottom: 365px;
+}

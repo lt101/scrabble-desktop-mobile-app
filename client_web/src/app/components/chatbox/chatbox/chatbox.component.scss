@@ -1,0 +1,81 @@
+.container {
+    padding: 1rem;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 210px;
+    right: 200px;
+    height: 590px;
+    width: 400px;
+    background-color: white;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.title-container {
+    background-color: var(--button-bg-color);
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Nunito', sans-serif !important;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-scope {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+}
+
+.scope {
+    padding: 0.5rem;
+}
+
+.scope:hover {
+    cursor: pointer;
+    background-color: #628662;
+}
+
+.general {
+    width: 50%;
+}
+
+.game {
+    width: 50%;
+}
+
+.selected {
+    border-bottom: 5px solid #42d0f3;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+::ng-deep .mat-menu-panel {
+    min-width: 250px !important;
+    width: 250px;
+    min-height: 10px !important;
+}
+
+::ng-deep {
+    .mat-checkbox-indeterminate.mat-primary .mat-checkbox-background,
+    .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+        background: var(--button-bg-color);
+    }
+    .mat-checkbox {
+        color: black;
+        position: relative;
+        left: 10px;
+    }
+    .mat-form-field.mat-focused .mat-form-field-label,
+    .mat-form-field-ripple {
+        color: black;
+    }
+}

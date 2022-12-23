@@ -1,0 +1,11 @@
+export const EVENT_AVAILABLE_ROOMS_UPDATED = 'room:available_rooms_updated';
+export const EVENT_OBSERVABLE_ROOMS_UPDATED = 'room:observable_rooms_updated';
+export const EVENT_JOIN_REQUESTED = 'room:join_requested';
+export const EVENT_JOIN_REQUEST_ABORTED = 'room:join_request_aborted';
+export const EVENT_JOIN_REQUEST_CANCELED = 'room:join_request_canceled';
+export const EVENT_JOIN_REQUEST_ACCEPTED = 'room:join_request_accepted';
+export const EVENT_JOIN_REQUEST_REJECTED = 'room:join_request_rejected';
+export const EVENT_CAN_START = 'room:game_can_start';
+export const EVENT_JOIN_REQUEST_ABANDONED = 'room:join_request_abandoned';
+export const EVENT_GAME_STARTED = 'room:game_started';
+export const MAX_GUESTS = 3;

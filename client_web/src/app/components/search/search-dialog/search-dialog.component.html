@@ -1,0 +1,16 @@
+<div>
+    <div class="card">
+        <div class="input-wrap">
+            <input [(ngModel)]="searchedWord" (ngModelChange)="updateWords($event)" type="search" [placeholder]="placeHolder" />
+        </div>
+        <div class="scroll">
+            <div *ngFor="let word of words | filter: searchedWord" class="word">
+                {{ word }}
+            </div>
+        </div>
+    </div>
+
+    <mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="false">{{ 'search.close' | transloco }}</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,17 @@
+<mat-card>
+    <div class="logo">
+        <img src="./assets/images/scrabble-logo.png" width="400" height="80" alt="Logo Scrabble" />
+        <h1>{{ 'mainPage.options.scrabbleMode.classic' | transloco }}</h1>
+    </div>
+    <div class="center">
+        <button disabled mat-raised-button color="primary" class="button" routerLink="solo">
+            <mat-icon>person</mat-icon> {{ 'mainPage.options.scrabbleMode.soloGame' | transloco }}
+        </button>
+        <button mat-raised-button color="primary" class="button" routerLink="multiplayer">
+            <mat-icon>people_alt</mat-icon> {{ 'mainPage.options.scrabbleMode.multiplayerGame' | transloco }}
+        </button>
+    </div>
+    <button mat-raised-button color="primary" class="button" routerLink="/home">
+        <mat-icon>arrow_back</mat-icon> {{ 'mainPage.options.scrabbleMode.back' | transloco }}
+    </button>
+</mat-card>

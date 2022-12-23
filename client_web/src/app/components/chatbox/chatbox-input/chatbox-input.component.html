@@ -1,0 +1,61 @@
+<mat-form-field appearance="fill">
+    <mat-label for="message">{{ 'chatBox.message' | transloco }}</mat-label>
+    <input
+        onfocus="this.select()"
+        placeholder="Entrez votre message"
+        matInput
+        id="message"
+        [(ngModel)]="message"
+        (keyup)="handleKeyPressEvent($event)"
+        [minlength]="messageMinLength"
+        [maxlength]="messageMaxLength"
+        (click)="handleClick($event)"
+    />
+</mat-form-field>
+<button mat-raised-button class="emoji-picker" (click)="toggleEmojiPicker()"><mat-icon> sentiment_satisfied_alt</mat-icon></button>
+<button mat-raised-button class="send-button" (click)="emitMessage()">{{ 'chatBox.send' | transloco }}</button>
+<button mat-raised-button class="toggle-giphy" (click)="toggleGiphySearch()">GIF</button>
+<button mat-raised-button class="toggle-upload" (click)="toggleUploadContainer()">{{ 'chatBox.uploadFile' | transloco }}</button>
+
+<!-- File upload -->
+<div class="upload-container" *ngIf="isUploadVisible">
+    <button mat-raised-button>
+        <mat-icon>upload</mat-icon>
+        <div class="file-upload">
+            <label mat-raised-button for="file-input" class="file-input">
+                {{ 'chatBox.upload' | transloco }}
+            </label>
+            <input id="file-input" class="form-control" type="file" (change)="onChange($event)" />
+        </div>
+    </button>
+    <div *ngIf="file" class="file-name">
+        <a href="{{ shortLink }}" target="_blank" rel="noopener noreferrer">{{ file.name }}</a>
+    </div>
+    <div *ngIf="!file" class="no-file">{{ 'chatBox.noFile' | transloco }}</div>
+    <div class="text-center">
+        <button mat-raised-button (click)="onUpload()" class="btn btn-success">{{ 'chatBox.send' | transloco }}</button>
+    </div>
+</div>
+
+<!-- File upload -->
+
+<emoji-mart
+    class="emoji-mart-component"
+    *ngIf="isEmojiPickerVisible"
+    [darkMode]="false"
+    (emojiSelect)="addEmoji($event)"
+    title="Choose your emoji"
+    set="google"
+></emoji-mart>
+
+<mat-card *ngIf="isGifSearchVisible" class="giphy-search">
+    <form (ngSubmit)="searchGiphy()">
+        <input type="text" placeholder="Search for a GIF" name="giphy" [(ngModel)]="giphySearchTerm" />
+        <button mat-raised-button class="send-button"><mat-icon>search</mat-icon></button>
+    </form>
+    <ul class="search-results">
+        <li class="gif-result" *ngFor="let result of giphyResults">
+            <img src="{{ result.images.downsized_large.url }}" (click)="emitGif(result.images.downsized_large.url)" />
+        </li>
+    </ul>
+</mat-card>

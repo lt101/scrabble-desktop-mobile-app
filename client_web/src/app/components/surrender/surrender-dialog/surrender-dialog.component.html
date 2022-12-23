@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{ 'surrender.abandonGame' | transloco }}</h2>
+<div color="primary">
+    <mat-dialog-content>{{ 'surrender.abandonMessage' | transloco }}</mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="surrender()" class="button">
+            {{ 'surrender.surrender' | transloco }}
+        </button>
+        <button mat-button [mat-dialog-close]="false">{{ 'surrender.cancel' | transloco }}</button>
+    </mat-dialog-actions>
+</div>

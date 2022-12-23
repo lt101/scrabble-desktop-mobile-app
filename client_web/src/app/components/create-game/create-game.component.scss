@@ -1,0 +1,110 @@
+:host {
+    background-image: var(--main-page-bg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+mat-card {
+    width: 40%;
+    min-width: 600px;
+    margin-top: 4rem;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-color: var(--bg-color);
+    transition: 0.5s;
+    h1 {
+        color: var(--primary-text-color);
+        transition: 0.5s;
+    }
+    button {
+        background-color: var(--button-bg-color);
+        &:hover {
+            background-color: var(--button-bg-color-hover);
+        }
+        &:disabled {
+            opacity: 0.4;
+            color: white;
+            background-color: var(--button-bg-color);
+        }
+    }
+}
+
+mat-form-field {
+    display: block;
+
+    .mat-select-value {
+        color: var(--primary-text-color);
+    }
+    mat-select {
+        color: var(--primary-text-color);
+    }
+}
+::ng-deep {
+    .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+        color: var(--button-bg-color);
+    }
+}
+:host ::ng-deep {
+    .mat-select-value,
+    mat-label,
+    .mat-icon {
+        color: var(--primary-text-color);
+    }
+    .mat-icon {
+        color: white;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline,
+    .mat-form-field.mat-focused .mat-form-field-ripple {
+        background-color: var(--button-bg-color);
+    }
+    .mat-form-field.mat-focused.mat-primary .mat-select-arrow,
+    .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+        color: var(--button-bg-color);
+    }
+    .mat-input-element {
+        caret-color: var(--button-bg-color);
+    }
+    app-create-game .mat-input-element {
+        color: var(--primary-text-color);
+    }
+}
+
+// ::ng-deep mat-label {
+//     color: var(--primary-text-color);
+// }
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.logo {
+    img {
+        content: var(--scrabble-logo);
+    }
+}
+button {
+    margin: 0.2rem;
+    float: center;
+    font-size: 15px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.password {
+    display: flex;
+    align-items: flex-end;
+    color: var(--primary-text-color);
+}
+
+.eye:hover {
+    cursor: pointer;
+}

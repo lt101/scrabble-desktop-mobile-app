@@ -1,0 +1,101 @@
+.container {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+.timer-container {
+    height: 150px;
+    position: relative;
+    bottom: 120px;
+    #timer {
+        position: relative;
+        bottom: 92px;
+        left: 42px;
+    }
+}
+
+.currentPlayer {
+    background-color: var(--current-player-bg-color);
+    color: white;
+    transition: all ease-in 0.3s;
+    h3 {
+        animation: size-change 1s infinite;
+        animation-timing-function: linear;
+    }
+}
+
+section {
+    width: 80%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    background-color: var(--button-bg-color);
+    border-radius: 4px;
+    color: white;
+    transition: all ease-in 0.3s;
+    h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes size-change {
+    0% {
+        color: white;
+    }
+    25% {
+        color: white;
+    }
+    50% {
+        color: var(--current-player-bg-color);
+    }
+    75% {
+        color: white;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: white;
+}
+.easelButton {
+    background-color: white;
+    color: var(--button-bg-color);
+    size: 50%;
+}
+
+.easelButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+// timer
+mat-progress-spinner {
+    position: relative;
+    left: 15px;
+    top: 130px;
+
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+:host ::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: var(--button-bg-color);
+}

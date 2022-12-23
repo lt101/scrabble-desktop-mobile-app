@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+    <div class="errorMsg" [ngStyle]="{'color':'darkred', 'font-size': '12px'}" *ngIf="usernameError && usernameError.length > 0">
+        {{ usernameError }}
+    </div>
+    <p>{{ 'mainPage.editUsername.editUsername' | transloco }}</p>
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'mainPage.editUsername.enterUsername' | transloco }}</mat-label>
+        <input matInput [(ngModel)]="data.name" />
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="onNoClick()">{{ 'mainPage.editUsername.close' | transloco }}</button>
+    <button class="edit-button" mat-raised-button (click)="changeUsername(data.name)">{{ 'mainPage.editUsername.edit' | transloco }}</button>
+</div>

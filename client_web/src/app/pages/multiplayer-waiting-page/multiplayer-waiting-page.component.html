@@ -1,0 +1,36 @@
+<mat-card>
+    <div class="logo">
+        <img width="400" height="80" alt="Logo Scrabble" />
+        <h1>{{ 'multiplayerWaitingPage.waitingAnotherPlayer' | transloco }}</h1>
+    </div>
+    <mat-spinner diameter="100" strokeWidth="10" class="mat-spinner-color"></mat-spinner>
+
+    <button [disabled]="!canStart" mat-raised-button color="primary" (click)="startGame()">
+        {{ 'multiplayerWaitingPage.startGame' | transloco }}
+    </button>
+    <button mat-raised-button color="primary" [routerLink]="[backLink]" (click)="cancelRoom()">
+        <mat-icon>close</mat-icon> {{ 'multiplayerWaitingPage.cancel' | transloco }}
+    </button>
+
+    <div *ngIf="visibility === 'private'">
+        <div *ngFor="let guest of guests">
+            <h2>{{ guest.name }} {{ 'multiplayerWaitingPage.wantToJoinGame' | transloco }}</h2>
+            <button mat-raised-button color="primary" (click)="accept(guest)" [disabled]="!guest">
+                <mat-icon>check_circle_outline</mat-icon> {{ 'multiplayerWaitingPage.accept' | transloco }}
+            </button>
+            <button mat-raised-button color="primary" (click)="reject(guest)" [disabled]="!guest">
+                <mat-icon>block</mat-icon> {{ 'multiplayerWaitingPage.reject' | transloco }}
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="visibility === 'public'">
+        <div *ngFor="let guest of guests">
+            <h2>{{ guest.name }} {{ 'multiplayerWaitingPage.joinGame' | transloco }}</h2>
+        </div>
+    </div>
+</mat-card>
+<button class="mute" (click)="musicClick()">
+    <div *ngIf="musicOn; else elseBlock"><span class="material-icons"> volume_down </span></div>
+    <ng-template #elseBlock><span class="material-icons"> volume_off </span></ng-template>
+</button>

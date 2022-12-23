@@ -1,0 +1,5 @@
+<button mat-raised-button color="primary" (click)="toggleChat()" class="button">
+    <mat-icon>question_answer</mat-icon>
+    {{ 'chatBox.chat' | transloco }}
+</button>
+<app-chatbox [hidden]="this.openChat"></app-chatbox>

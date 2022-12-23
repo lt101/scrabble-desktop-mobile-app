@@ -1,0 +1,201 @@
+{
+    "gamePage": {
+        "play": "Play",
+        "exchange": "Exchange",
+        "cancel": "Cancel"
+    },
+    "loginPage": {
+        "connect": "Log in",
+        "mail": "Email address",
+        "password": "password",
+        "noAccount": "No account? Sign up",
+        "login": "Sign in",
+        "emptyField": "Error, a required field is empty",
+        "incorrectPassword": "incorrect password",
+        "error": {
+            "userAlreadyConnected": "User is already logged in",
+            "emailNotAssociated": "This email address is not associated with any account",
+            "connectionError": "Connection error"
+        }
+    },
+    "classicMode": "Classic Mode",
+    "mainPage": {
+        "editAvatar": {
+            "editAvatar": "Edit Avatar",
+            "avatarChoice": "Choose a profile image",
+            "cancel": "Cancel",
+            "edit": "Edit",
+            "upload": "upload"
+        },
+        "editUsername": {
+            "editUsername": "Change Username",
+            "enterUsername": "Enter a Username",
+            "close": "Close",
+            "edit": "Edit"
+        },
+        "gamePlayedHistory": {
+            "gameHistory": "Game History",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "gameResult": "Game result",
+            "Victory": "Victory",
+            "Defeat": "Defeat",
+            "close": "Close"
+        },
+        "logInHistory": {
+            "rank": "Rank:",
+            "level": "Level: ",
+            "gamesPlayed": "Games played:",
+            "gamesWon": "Games won:",
+            "gamesLost": "Lost games:",
+            "averagePoints": "Average score:",
+            "averageTime": " Average time:",
+            "connectionHistory": "History of connections",
+            "Connections": "Connections",
+            "Disconnections": "Disconnections",
+            "viewConnectionHistory": "View  connection history",
+            "viewGameHistory": "View  game history",
+            "logOut": "Sign out",
+            "close": "Close"
+        },
+        "options": {
+            "chooseOption": "Choose an option",
+            "scrabbleMode": {
+                "classic": "Classic Scrabble",
+                "objective": "Objectives Scrabble",
+                "soloGame": "Play a solo game",
+                "multiplayerGame": "Play a multiplayer game",
+                "back": "Back"
+            }
+        },
+        "gameSettings": {
+            "gameSettings": "Game settings",
+            "chooseVisualTheme": "Choose a visual theme :",
+            "Close": "Close"
+        },
+        "team": "Team 106"
+    },
+    "multiplayerJoinPage": {
+        "joinMultiplayerGame": "Join a multiplayer game",
+        "privateGame": "Private games",
+        "objectiveGame": "Objective games",
+        "noAvailablePrivateGame": "There are no private games available, why not ",
+        "noObjectiveGames": "There are no objective games available, why not ",
+        "createOne": "create one",
+        "host": "Host",
+        "timer": "Timer",
+        "dictionary": "Dictionary",
+        "action": "Action",
+        "login": "login",
+        "join": "Join",
+        "players": "Guests",
+        "virtualPlayers": "virtual players : ",
+        "humanPlayer": "human players : ",
+        "observers": "observers",
+        "publicGames": "Public games",
+        "noAvailablePublicGame": "There are no public games available, why not ",
+        "Observe": "Observe",
+        "password": "Password",
+        "wrongPassword": "The password is invalid! Please try again.",
+        "cancel": "Cancel",
+        "back": "Back",
+        "messageAborted": "This game no longer exists, please select another one.",
+        "messageRejected": "The game host has rejected your request, please select another game.",
+        "messageAccepted": "The game host has accepted your request, please wait for the host to start the game."
+    },
+    "multiplayerPage": {
+        "multiplayerMode": "Multiplayer mode",
+        "createGame": " Create a game",
+        "joinGame": " Join a game",
+        "back": "Back",
+        "visibility": {
+            "private": "Private",
+            "public": "Public"
+        }
+    },
+    "multiplayerWaitingPage": {
+        "waitingAnotherPlayer": "Waiting for another player",
+        "startGame": "Start the game",
+        "cancel": "Cancel",
+        "wantToJoinGame": "wants to join the game",
+        "accept": "Accept",
+        "reject": "Reject",
+        "joinGame": "joined the game"
+    },
+    "chatBox": {
+        "chat": "Chat",
+        "censoring": "Censor the vulgar words",
+        "message": "Message",
+        "send": "Send",
+        "generalChat": "General Chat",
+        "gameChat": "Party chat",
+        "upload": "Upload",
+        "noFile": "No file chosen",
+        "uploadFile": "Upload a File"
+    },
+    "clue": {
+        "clue": "Clue",
+        "possiblePlacements": "Here are some possible placements!",
+        "instant": "One moment ...",
+        "close": "Close",
+        "place": "Place",
+        "letters": "Letters:"
+    },
+    "controlPanel": {
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out"
+    },
+    "createGame": {
+        "createGame": "Create a game",
+        "multiplayerMode": "multiplayer",
+        "opponentLevel": "opponent's level",
+        "timer": "Timer",
+        "dictionary": "Dictionary",
+        "visibility": "Visibility",
+        "optionalPassword": "Password (optional)",
+        "back": "Back",
+        "confirmParameters": "Confirm settings"
+    },
+    "endGame": {
+        "partyEnded": "Game over",
+        "quit": "Leave"
+    },
+    "objectives": "Objectives",
+    "passTurn": "Skip your turn",
+    "search": {
+        "searchWord": "Search for a word",
+        "close": "Close"
+    },
+    "sideBar": {
+        "reserveLetters": "letters in the reserve",
+        "letters": "Letters",
+        "viewEasel": "View Easel",
+        "replace": "Replace"
+    },
+    "surrender": {
+        "surrender": "Give up",
+        "quit": "Leave",
+        "abandonGame": "Abandon this game",
+        "abandonMessage": "Do you really want to give up this game?",
+        "cancel": "Cancel"
+    },
+    "gameMode": {
+        "multiplayer": "Play a multiplayer game"
+    },
+    "back": "Back",
+    "language": {
+        "languageMessage": "Select your language",
+        "french": "French",
+        "english": "English"
+    },
+    "tooltip": {
+        "easel": "Your easel contains your letters. Drag and drop them onto the board to form words, or exchange them for different ones!",
+        "grid": "The board contains all currently formed words. Try hitting a bonus tile! DL - double letter; TL - triple letter; DW - double word; TW - triple word",
+        "pass": "Pass your turn.",
+        "exchange": "To exchange letters, left-click on the letters you want to exchange from your easel and click on the Exchange button."
+    },
+    "Pas de grade": "No rank",
+    "Pas de niveau": "No level",
+    "Privée": "Private",
+    "Publique": "Publique"
+}

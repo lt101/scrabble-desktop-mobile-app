@@ -1,0 +1,4 @@
+<button *ngIf="!isObserver" mat-raised-button id="clue" [disabled]="!isCurrentPlayer" (click)="openClueDialog()" class="button">
+    <ng-template #elseBlock></ng-template>
+    <mat-icon>lightbulb</mat-icon>
+</button>

@@ -1,0 +1,57 @@
+.highlight {
+    img {
+        border: 10px solid var(--button-bg-color);
+    }
+}
+
+mat-grid-tile {
+    border-radius: 50%;
+}
+img {
+    border-radius: 50%;
+}
+
+mat-dialog-content {
+    max-height: 85%;
+}
+
+:host ::ng-deep {
+    .mat-dialog-container {
+        position: relative;
+        top: 50px;
+        background-color: var(--bg-color);
+        max-height: 90%;
+        height: 90%;
+        padding-bottom: 0;
+    }
+    // .mat-dialog-actions,
+    // .mat-button {
+    //     color: var(--primary-text-color);
+    //     background-color: var(--bg-color);
+    // }
+    // .mat-dialog-actions .mat-button-base + .mat-button-base,
+    // .mat-dialog-actions .mat-mdc-button-base + .mat-mdc-button-base {
+    //     background-color: var(--button-bg-color);
+    //     color: var(--secondary-text-color);
+    // }
+    .mat-dialog-actions {
+        margin-top: 20px;
+    }
+}
+
+h2 {
+    color: black;
+    width: fit-content;
+    position: relative;
+    left: calc(50% - 175px);
+    font-size: 26px;
+}
+
+.edit-button {
+    background-color: var(--button-bg-color);
+    border: var(--button-bg-color);
+    color: white;
+    &:hover {
+        background-color: var(--button-bg-color-hover);
+    }
+}

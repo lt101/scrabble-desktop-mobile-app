@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{ 'mainPage.editAvatar.avatarChoice' | transloco }}</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-grid-list cols="4">
+        <mat-grid-tile
+            [colspan]="1"
+            *ngFor="let avatar of avatars; index as i;"
+            (click)="setSelection(i)"
+            [ngClass]="{'highlight': selectedAvatarIndex === i}"
+            ><img src="{{avatar}}" height="200px" width="200px" />
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>{{ 'mainPage.editAvatar.cancel' | transloco }}</button>
+    <button mat-button class="edit-button" (click)="openAvatarUploadDialog()">{{ 'mainPage.editAvatar.upload' | transloco }}</button>
+    <button mat-raised-button class="edit-button" [mat-dialog-close]="true" (click)="changeAvatar()">
+        {{ 'mainPage.editAvatar.edit' | transloco }}
+    </button>
+</mat-dialog-actions>

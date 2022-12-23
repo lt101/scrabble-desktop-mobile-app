@@ -1,0 +1,3 @@
+<button *ngIf="!isObserver" mat-raised-button color="primary" [disabled]="!isCurrentPlayer || !onExchange" (click)="cancelExchange()">
+    {{ 'gamePage.cancel' | transloco }} <mat-icon>cancel</mat-icon>
+</button>

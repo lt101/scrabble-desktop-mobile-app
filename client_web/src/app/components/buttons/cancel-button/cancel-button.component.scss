@@ -1,0 +1,14 @@
+.mat-raised-button {
+    min-width: 120px !important;
+    background-color: #800000;
+    color: white;
+    height: 60px;
+    border-radius: 30px;
+    &:disabled {
+        background-color: #800000;
+        color: white;
+    }
+    &:hover {
+        background-color: #ac0101;
+    }
+}

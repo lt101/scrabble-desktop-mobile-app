@@ -1,0 +1,70 @@
+:host {
+    background-image: var(--main-page-bg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+mat-card {
+    display: inline;
+    width: 40%;
+    min-width: 300px;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    h1,
+    h3 {
+        color: var(--primary-text-color);
+        transition: 0.5s;
+    }
+    button {
+        background-color: var(--button-bg-color);
+        &:hover {
+            background-color: var(--button-bg-color-hover);
+        }
+        &:disabled {
+            opacity: 0.4;
+            color: white;
+            background-color: var(--button-bg-color);
+        }
+    }
+}
+
+mat-spinner {
+    margin: 4rem auto;
+}
+
+:host ::ng-deep .mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode='indeterminate'] circle {
+    stroke: var(--button-bg-color) !important;
+}
+
+h2 {
+    color: var(--primary-text-color);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    margin: 0.2rem;
+    float: center;
+    font-size: 15px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+.logo {
+    img {
+        content: var(--scrabble-logo);
+    }
+}
+:host .mat-spinner-color::ng-deep circle {
+    stroke: rgb(1, 99, 1) !important;
+}

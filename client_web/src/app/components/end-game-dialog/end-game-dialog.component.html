@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>{{ 'endGame.partyEnded' | transloco }}</h2>
+<div color="primary">
+    <mat-dialog-content>{{ data.content }}</mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" [mat-dialog-close]="true" [routerLink]="['/home']">{{ 'endGame.quit' | transloco }}</button>
+    </mat-dialog-actions>
+</div>

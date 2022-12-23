@@ -1,0 +1,17 @@
+<mat-card class="main-container">
+    <div class="logo">
+        <img width="400" height="80" alt="Logo Scrabble" />
+        <h1>{{ 'multiplayerPage.multiplayerMode' | transloco }}</h1>
+    </div>
+    <div class="center">
+        <button mat-raised-button color="primary" routerLink="create">
+            <mat-icon>add_circle_outline</mat-icon>{{ 'multiplayerPage.createGame' | transloco }}
+        </button>
+        <button mat-raised-button color="primary" routerLink="join" (click)="musicService.playMusic()">
+            <mat-icon>login</mat-icon>{{ 'multiplayerPage.joinGame' | transloco }}
+        </button>
+    </div>
+    <button mat-raised-button color="primary" [routerLink]="['/home']">
+        <mat-icon>arrow_back</mat-icon>{{ 'multiplayerPage.back' | transloco }}
+    </button>
+</mat-card>

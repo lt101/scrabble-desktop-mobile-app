@@ -1,0 +1,26 @@
+<div class="container" cdkDrag>
+    <div class="title-container">
+        <div class="chat-scope">
+            <div class="scope general" [ngClass]="this.isGeneral ? 'selected' : ''" (click)="toggleScope(true)">
+                {{ 'chatBox.generalChat' | transloco }}
+            </div>
+            <div class="scope game" [ngClass]="!this.isGeneral ? 'selected' : ''" (click)="toggleScope(false)">
+                {{ 'chatBox.gameChat' | transloco }}
+            </div>
+        </div>
+
+        <div class="options">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="menu">
+                <mat-checkbox (change)="toggleCensorship($event)" color="primary" (click)="$event.stopPropagation()">
+                    <span>{{ 'chatBox.censoring' | transloco }}</span>
+                </mat-checkbox>
+            </mat-menu>
+        </div>
+    </div>
+    <app-chatbox-messages [messages]="messagesGeneral" *ngIf="isGeneral" [messageCount]="messageCount"></app-chatbox-messages>
+    <app-chatbox-messages [messages]="messagesGame" *ngIf="!isGeneral" [messageCount]="messageCount"></app-chatbox-messages>
+    <app-chatbox-input [isGeneralScope]="isGeneral"></app-chatbox-input>
+</div>

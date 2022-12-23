@@ -1,0 +1,14 @@
+h3 {
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+:host ::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: var(--button-bg-color);
+}

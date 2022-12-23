@@ -1,0 +1,81 @@
+.container {
+    height: 100% !important;
+    width: 100% !important;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 0.05fr;
+    background: var(--game-page-bg);
+    background-size: cover;
+}
+h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    position: relative;
+    left: calc(50% - 60px);
+    top: calc(50% - 20px);
+}
+.objectives {
+    background: url(../../../assets/images/stone-bg.png);
+    background-size: 100% 100%;
+    height: 450px;
+    position: relative;
+    bottom: 50px;
+    left: 15px;
+}
+.logo {
+    position: relative;
+    bottom: 60px;
+    img {
+        content: var(--scrabble-logo);
+    }
+}
+
+:host ::ng-deep {
+    .mat-flat-button.mat-primary,
+    .mat-raised-button.mat-primary,
+    .mat-fab.mat-primary,
+    .mat-mini-fab.mat-primary {
+        background-color: var(--button-bg-color);
+        &:hover {
+            background-color: var(--button-bg-color-hover);
+        }
+        &:disabled {
+            opacity: 0.4;
+            color: white;
+            background-color: var(--button-bg-color);
+        }
+    }
+}
+.left {
+    margin-top: 15%;
+}
+.mute {
+    margin-left: 80%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 75%;
+    height: auto;
+}
+.music {
+    background-color: var(--button-bg-color);
+}
+.center {
+    height: 100vh;
+    width: 100%;
+    min-width: 656px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    .grid {
+        padding: 2rem;
+        position: relative;
+        left: 110px;
+    }
+}

@@ -1,0 +1,285 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    img {
+        content: var(--scrabble-logo);
+    }
+}
+.menu-options {
+    position: relative;
+    top: 250px;
+    right: 230px;
+}
+.mat-icon {
+    position: relative;
+    bottom: 10px;
+    margin-right: 40px;
+    font-size: 40px;
+}
+.justified {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        color: var(--primary-text-color);
+        transition: 0.5s;
+    }
+    button {
+        width: 370px;
+        height: 100px;
+        border-radius: 50px;
+        margin-bottom: 30px;
+        border: 4px solid white;
+        color: white;
+        font-size: 26px;
+        transition: 0.25s;
+
+        &#classic-button {
+            background: var(--main-page-button-bg-color);
+
+            &:hover {
+                background: var(--main-page-button-bg-color-hover);
+            }
+        }
+        background: rgb(49, 5, 68);
+        background: linear-gradient(90deg, #310544 0%, #760c89 100%, rgba(0, 0, 0, 1) 100%);
+        &:hover {
+            background: rgb(77, 6, 107);
+            background: linear-gradient(90deg, rgba(77, 6, 107, 1) 0%, rgba(130, 16, 150, 1) 100%, rgba(0, 0, 0, 1) 100%);
+        }
+        &:hover,
+        &:focus {
+            box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+            transform: translateY(-0.25em);
+        }
+    }
+}
+
+:host {
+    background-image: var(--main-page-bg);
+    //      transition: 0.5s;
+
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    margin-bottom: 40px;
+}
+
+.button {
+    min-width: 60%;
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem 0;
+    background-color: var(--primary);
+}
+
+.team-name {
+    margin-top: 0.25em;
+    margin-bottom: 1rem;
+    color: var(--primary-text-color);
+    font-weight: bold;
+}
+
+.footer-item {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-item p :nth-child(even) {
+    color: orange;
+    font-size: small;
+}
+.footer-item p :nth-child(odd) {
+    color: blue;
+    font-size: small;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 50px;
+    right: 18vw;
+}
+
+.avatar-container {
+    cursor: pointer;
+    background-color: var(--bg-color);
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+
+    @include flexCenter;
+    border-radius: 10px;
+}
+
+.username-container {
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    @include flexCenter;
+    transition: 0.5s;
+    width: fit-content;
+    height: 50px;
+    right: 10px;
+    position: relative;
+    top: 75px;
+}
+
+.username {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.avatar {
+    width: 90%;
+    height: 90%;
+}
+.sidebar-avatar {
+    @include flexCenter;
+    img {
+        background-color: white;
+        border: 10px solid white;
+        border-radius: 100%;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+.sidebar-username {
+    background: transparent;
+    color: white;
+    transition: 0.5s;
+    margin-bottom: 15px;
+    @include flexCenter;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 0;
+    left: 0;
+    background: var(--sidebar-bg-color);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar {
+    color: white;
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .icon{
+        transform: scale(1);
+
+    }
+    .stats {
+        display: flex;
+        font-size: 21px;
+        padding-left: 5px;
+    }
+    .stats-value {
+        padding-left: 5px;
+    }
+
+}
+
+.buttons-container {
+    @include flexCenter();
+    flex-direction: column;
+    button {
+        width: 75%;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 10px;
+        border-radius: 5px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .edit-button {
+        background-color: var(--secondary-button-bg-color);
+        border: var(--secondary-button-bg-color);
+        color: white;
+        &:hover {
+            background-color: var(--secondary-button-bg-color-hover);
+        }
+    }
+    .disconnect-button {
+        color: white;
+        font-family: 'Nunito';
+        background-color: transparent;
+        border: white;
+        transition: 0.5s;
+    }
+}
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.theme-switch {
+    position: relative;
+    left: 900px;
+    top: 30px;
+}
+
+.game-settings {
+    position: relative;
+    left: 950px;
+    top: 30px;
+}
+
+.icon-settings {
+    transform: scale(2);
+}

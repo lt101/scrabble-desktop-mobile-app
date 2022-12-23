@@ -1,0 +1,11 @@
+<button *ngIf="!isObserver" mat-raised-button color="primary" (click)="surrender()" class="button">
+    <ng-template #elseBlock></ng-template>
+    <mat-icon>arrow_back</mat-icon>
+    {{ 'surrender.surrender' | transloco }}
+</button>
+
+<button *ngIf="isObserver" mat-raised-button color="primary" (click)="quitGameObservation()" class="button">
+    <ng-template #elseBlock></ng-template>
+    <mat-icon>arrow_back</mat-icon>
+    {{ 'surrender.quit' | transloco }}
+</button>

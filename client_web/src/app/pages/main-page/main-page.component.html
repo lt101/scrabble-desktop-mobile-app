@@ -1,0 +1,87 @@
+<div id="mySidebar" [ngStyle]="{ width: sidebarWidth }" class="sidebar">
+    <div class="sidebar-username">
+        <div class="username">{{ this.authService.userProfile.userName }}</div>
+    </div>
+    <div class="sidebar-avatar">
+        <img src="{{ this.authService.userProfile.avatarUrl }}" />
+    </div>
+    <a class="closebtn" (click)="this.closeSideBar()">×</a>
+    <div>
+        <div class="stats">
+            <div class="icon"><mat-icon>keyboard_double_arrow_up</mat-icon></div>
+            {{ 'mainPage.logInHistory.rank' | transloco }}
+            <div class="stats-value">{{ grade }}</div>
+        </div>
+        <div class="stats">
+            <div class="icon"><mat-icon>grade</mat-icon></div>
+            {{ 'mainPage.logInHistory.level' | transloco }}
+            <div class="stats-value">{{ level }}</div>
+        </div>
+        <div class="stats">
+            <div class="icon"><mat-icon>gamepad</mat-icon></div>
+            {{ 'mainPage.logInHistory.gamesPlayed' | transloco }}
+            <div class="stats-value">{{ this.authService.userProfile.gamePlayed }}</div>
+        </div>
+        <div class="stats">
+            <div class="icon"><mat-icon>emoji_events_rounded</mat-icon></div>
+            {{ 'mainPage.logInHistory.gamesWon' | transloco }}
+            <div class="stats-value">{{ this.authService.userProfile.gameWon }}</div>
+        </div>
+        <div class="stats">
+            <div class="icon"><mat-icon>emoji_events_rounded</mat-icon></div>
+            {{ 'mainPage.logInHistory.gamesLost' | transloco }}
+            <div class="stats-value">{{ this.authService.userProfile.gameLost }}</div>
+        </div>
+        <div class="stats">
+            <div class="icon"><mat-icon>analytics_rounded</mat-icon></div>
+            {{ 'mainPage.logInHistory.averagePoints' | transloco }}
+            <div class="stats-value">{{ this.authService.userProfile.averagePoints }}</div>
+        </div>
+        <div class="stats">
+            <div class="icon"><mat-icon>access_time</mat-icon></div>
+            {{ 'mainPage.logInHistory.averageTime' | transloco }}
+            <div class="stats-value">
+                {{ this.authService.userProfile.averageTime?.minutes }} min {{ this.authService.userProfile.averageTime?.seconds }} s
+            </div>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button class="edit-button" mat-raised-button onclick="this.blur()" (click)="openUsernameDialog()">
+            {{ 'mainPage.editUsername.editUsername' | transloco }}
+        </button>
+        <button class="edit-button" mat-raised-button (click)="openAvatarDialog()">{{ 'mainPage.editAvatar.editAvatar' | transloco }}</button>
+        <button class="edit-button" mat-raised-button (click)="openLoginHistoryDialog()">
+            {{ 'mainPage.logInHistory.viewConnectionHistory' | transloco }}
+        </button>
+        <button class="edit-button" mat-raised-button (click)="openGamePlayedHistoryDialog()">
+            {{ 'mainPage.logInHistory.viewGameHistory' | transloco }}
+        </button>
+        <button class="disconnect-button" (click)="signOut()">{{ 'mainPage.logInHistory.logOut' | transloco }}</button>
+    </div>
+</div>
+
+<div class="profile-container" (click)="this.openSideBar()">
+    <div class="avatar-container">
+        <img src="{{ this.authService.userProfile.avatarUrl }}" class="avatar" />
+    </div>
+    <div class="username-container">
+        <p class="username">{{ this.authService.userProfile.userName }}</p>
+    </div>
+</div>
+<!-- <app-theme-switcher class="theme-switch"></app-theme-switcher> -->
+<button mat-button class="game-settings" (click)="openGameSettingsDialog()"><mat-icon class="icon-settings">settings</mat-icon></button>
+<div class="menu-options">
+    <div class="logo">
+        <img src="./assets/images/scrabble-logo.png" width="600" height="110" alt="Logo Scrabble" />
+    </div>
+    <div class="justified">
+        <button mat-raised-button class="button" id="classic-button" [routerLink]="['/classic/multiplayer']">
+            <mat-icon>sports_esports</mat-icon>{{ 'mainPage.options.scrabbleMode.classic' | transloco }}
+        </button>
+        <button mat-raised-button class="button" id="log2990-button" [routerLink]="['/log2990/multiplayer']">
+            <mat-icon>checklist_rtl</mat-icon>{{ 'mainPage.options.scrabbleMode.objective' | transloco }}
+        </button>
+    </div>
+</div>
+
+<!-- <app-chat-button></app-chat-button> -->

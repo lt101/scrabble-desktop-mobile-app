@@ -1,0 +1,12 @@
+.grid {
+    display: flex;
+    place-items: center;
+    margin-left: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: white;
+}

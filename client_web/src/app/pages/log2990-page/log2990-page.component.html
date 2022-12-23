@@ -1,0 +1,12 @@
+<mat-card>
+    <div class="logo">
+        <img width="400" height="80" alt="Logo Scrabble" />
+        <h1>{{ 'mainPage.options.scrabbleMode.objective' | transloco }}</h1>
+    </div>
+    <div class="center">
+        <button mat-raised-button color="primary" class="button" routerLink="multiplayer">
+            <mat-icon>people_alt</mat-icon> {{ 'gameMode.multiplayer' | transloco }}
+        </button>
+    </div>
+    <button mat-raised-button color="primary" class="button" routerLink="/home"><mat-icon>arrow_back</mat-icon> Retour</button>
+</mat-card>

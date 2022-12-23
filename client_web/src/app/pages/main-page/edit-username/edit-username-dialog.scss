@@ -1,0 +1,44 @@
+:host ::ng-deep {
+    .mat-dialog-container {
+        background-color: var(--bg-color);
+        .mat-input-element {
+            color: var(--primary-text-color);
+        }
+    }
+
+    // .mat-dialog-actions {
+    //     color: var(--primary-text-color);
+    // }
+    // .mat-dialog-actions .mat-button-base + .mat-button-base,
+    // .mat-dialog-actions .mat-mdc-button-base + .mat-mdc-button-base {
+    //     background-color: var(--button-bg-color);
+    //     color: var(--secondary-text-color);
+    // }
+    .mat-input-element {
+        caret-color: var(--button-bg-color);
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline,
+    .mat-form-field.mat-focused .mat-form-field-ripple {
+        background-color: var(--button-bg-color);
+    }
+    .mat-select-value,
+    mat-label,
+    .mat-icon {
+        color: black;
+    }
+}
+
+.edit-button {
+    background-color: var(--button-bg-color);
+    border: var(--button-bg-color);
+    color: white;
+    &:hover {
+        background-color: var(--button-bg-color-hover);
+    }
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}

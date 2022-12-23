@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" class="">
+    <mat-label>{{ languageSelectionMessage }}</mat-label>
+    <mat-select [(value)]="selectedLanguage" (selectionChange)="changeLanguage($event.value)">
+        <mat-option value="fr">{{ 'language.french' | transloco }}</mat-option>
+        <mat-option value="en">{{ 'language.english' | transloco }}</mat-option>
+    </mat-select>
+</mat-form-field>

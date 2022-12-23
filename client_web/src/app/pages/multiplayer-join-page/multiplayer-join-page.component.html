@@ -1,0 +1,210 @@
+<mat-card>
+    <div class="logo">
+        <img width="400" height="80" alt="Logo Scrabble" />
+        <h1>{{ 'multiplayerJoinPage.joinMultiplayerGame' | transloco }}</h1>
+    </div>
+    <div *ngIf="!isSelected">
+        <h1 *ngIf="gameMode !== 'log2990'">{{ 'multiplayerJoinPage.privateGame' | transloco }}</h1>
+        <h1 *ngIf="gameMode === 'log2990'">{{ 'multiplayerJoinPage.objectiveGame' | transloco }}</h1>
+        <div *ngIf="privateAvailableRooms?.length === 0">
+            <h3 *ngIf="gameMode === 'log2990'">
+                {{ 'multiplayerJoinPage.noObjectiveGames' | transloco }}
+                <button mat-stroked-button color="primary" [routerLink]="[backLink + '/create']">
+                    {{ 'multiplayerJoinPage.createOne' | transloco }}
+                </button>
+                ?
+            </h3>
+            <h3>
+                {{ 'multiplayerJoinPage.noAvailablePrivateGame' | transloco }}
+                <button mat-stroked-button color="primary" [routerLink]="[backLink + '/create']">
+                    {{ 'multiplayerJoinPage.createOne' | transloco }}
+                </button>
+                ?
+            </h3>
+        </div>
+        <div *ngIf="privateAvailableRooms?.length ?? 0 > 0">
+            <table mat-table [dataSource]="privateAvailableRooms" class="mat-elevation-z8">
+                <ng-container matColumnDef="hostName">
+                    <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.host' | transloco }}</th>
+                    <td mat-cell *matCellDef="let element">{{ element.hostName }}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="timer">
+                    <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.timer' | transloco }}</th>
+                    <td mat-cell *matCellDef="let element">{{ element.parameters.timer }}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="dictionary">
+                    <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.dictionary' | transloco }}</th>
+                    <td mat-cell *matCellDef="let element">{{ element.parameters.dictionary }}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="button">
+                    <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.action' | transloco }}</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-raised-button color="primary" class="select" (click)="selectRoom(element.id)">
+                            <mat-icon>{{ 'multiplayerJoinPage.login' | transloco }}</mat-icon> {{ 'multiplayerJoinPage.join' | transloco }}
+                        </button>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.players' | transloco }}</th>
+                    <td mat-cell *matCellDef="let element">
+                        <span> {{ getNumberOfPlayers(element.players, 'virtual') }} {{ 'multiplayerJoinPage.virtualPlayers' | transloco }}</span>
+                        <span *ngFor="let player of element.players">
+                            <span *ngIf="player.id.includes('virtual')"> {{ player.name }} |</span>
+                        </span>
+                        <br />
+                        <span> {{ getNumberOfPlayers(element.players, 'human') }} {{ 'multiplayerJoinPage.humanPlayer' | transloco }}</span>
+                        <span *ngFor="let player of element.players">
+                            <span *ngIf="!player.id.includes('virtual')"> {{ player.name }} |</span>
+                        </span>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+        </div>
+        <br />
+
+        <div *ngIf="gameMode !== 'log2990'">
+            <h1>{{ 'multiplayerJoinPage.publicGames' | transloco }}</h1>
+            <div *ngIf="publicAvailableRooms?.length === 0">
+                <h3>
+                    {{ 'multiplayerJoinPage.noAvailablePublicGame' | transloco }}
+                    <button mat-stroked-button color="primary" [routerLink]="[backLink + '/create']">
+                        {{ 'multiplayerJoinPage.createOne' | transloco }}
+                    </button>
+                    ?
+                </h3>
+            </div>
+            <div *ngIf="publicAvailableRooms?.length ?? 0 > 0">
+                <table mat-table [dataSource]="publicAvailableRooms" class="mat-elevation-z8">
+                    <ng-container matColumnDef="hostName">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.host' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">{{ element.hostName }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="timer">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.timer' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">{{ element.parameters.timer }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="dictionary">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.dictionary' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">{{ element.parameters.dictionary }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="button">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.action' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-raised-button color="primary" class="select" (click)="selectRoom(element.id)">
+                                <mat-icon>{{ 'multiplayerJoinPage.login' | transloco }}</mat-icon> {{ 'multiplayerJoinPage.join' | transloco }}
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.players' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">
+                            <span> {{ getNumberOfPlayers(element.players, 'virtual') }} {{ 'multiplayerJoinPage.virtualPlayers' | transloco }}</span>
+                            <span *ngFor="let player of element.players">
+                                <span *ngIf="player.id.includes('virtual')"> {{ player.name }} |</span>
+                            </span>
+                            <br />
+                            <span> {{ getNumberOfPlayers(element.players, 'human') }} {{ 'multiplayerJoinPage.humanPlayer' | transloco }}</span>
+                            <span *ngFor="let player of element.players">
+                                <span *ngIf="!player.id.includes('virtual')"> {{ player.name }} |</span>
+                            </span>
+                            <br />
+                            <span> {{ element.observers.length }} {{ 'multiplayerJoinPage.observers' | transloco }} </span>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+            </div>
+            <div *ngIf="observableRooms?.length ?? 0 > 0">
+                <table mat-table [dataSource]="observableRooms" class="mat-elevation-z8">
+                    <ng-container matColumnDef="hostName">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.host' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">{{ element.hostName }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="timer">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.timer' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">{{ element.parameters.timer }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="dictionary">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.dictionary' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">{{ element.parameters.dictionary }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="button">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.action' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-raised-button color="primary" class="select" (click)="selectRoom(element.id)">
+                                <mat-icon>remove_red_eye</mat-icon> {{ 'multiplayerJoinPage.Observe' | transloco }}
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef>{{ 'multiplayerJoinPage.players' | transloco }}</th>
+                        <td mat-cell *matCellDef="let element">
+                            <span> {{ getNumberOfPlayers(element.players, 'virtual') }} {{ 'multiplayerJoinPage.virtualPlayers' | transloco }}</span>
+                            <span *ngFor="let player of element.players">
+                                <span *ngIf="player.id.includes('virtual')"> {{ player.name }} |</span>
+                            </span>
+                            <br />
+                            <span> {{ getNumberOfPlayers(element.players, 'human') }} {{ 'multiplayerJoinPage.humanPlayer' | transloco }}</span>
+                            <span *ngFor="let player of element.players">
+                                <span *ngIf="!player.id.includes('virtual')"> {{ player.name }} |</span>
+                            </span>
+                            <br />
+                            <span> {{ element.observers.length }} {{ 'multiplayerJoinPage.observers' | transloco }} </span>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+            </div>
+        </div>
+
+        <button mat-raised-button color="primary" [routerLink]="[backLink]">
+            <mat-icon>arrow_back</mat-icon> {{ 'multiplayerJoinPage.back' | transloco }}
+        </button>
+    </div>
+    <form [formGroup]="joinForm" *ngIf="isSelected && !isWaiting">
+        <mat-form-field *ngIf="roomHasPassword()">
+            <mat-label>{{ 'multiplayerJoinPage.password' | transloco }}</mat-label>
+            <div class="password">
+                <input matInput [type]="show ? 'text' : 'password'" id="myPassword" formControlName="password" />
+                <mat-icon class="eye" style="float: right" (click)="showPassword()">remove_red_eye</mat-icon>
+            </div>
+        </mat-form-field>
+
+        <span style="color: darkred" *ngIf="!validPassword"> {{ 'multiplayerJoinPage.wrongPassword' | transloco }}</span>
+        <br />
+        <br />
+        <button class="join-request" mat-raised-button color="primary" [disabled]="joinForm.invalid" (click)="joinRequest()">
+            <mat-icon>{{ 'multiplayerJoinPage.login' | transloco }}</mat-icon> {{ 'multiplayerJoinPage.join' | transloco }}
+        </button>
+    </form>
+    <div *ngIf="isSelected && isWaiting">
+        <mat-spinner diameter="100" strokeWidth="10" class="mat-spinner-color"></mat-spinner>
+        <h3 *ngIf="message">{{ message }}</h3>
+        <button class="cancel-request" mat-raised-button color="primary" [routerLink]="[backLink]" (click)="abandonJoinRequest()">
+            <mat-icon>arrow_back</mat-icon> {{ 'multiplayerJoinPage.cancel' | transloco }}
+        </button>
+    </div>
+</mat-card>
+<button class="mute" (click)="musicClick()">
+    <div *ngIf="musicOn; else elseBlock"><span class="material-icons"> volume_down </span></div>
+    <ng-template #elseBlock><span class="material-icons"> volume_off </span></ng-template>
+</button>

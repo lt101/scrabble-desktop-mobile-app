@@ -1,0 +1,18 @@
+<div>
+    <h2 mat-dialog-title>{{ 'clue.possiblePlacements' | transloco }}</h2>
+    <div color="primary">
+        <div *ngIf="isWaiting">
+            <mat-spinner diameter="50" strokeWidth="8" class="mat-spinner-color"></mat-spinner>
+            <h3>{{ 'clue.instant' | transloco }}</h3>
+        </div>
+        <div *ngIf="!isWaiting">
+            <div *ngFor="let hint of hints">
+                <h3>{{ hint }}</h3>
+            </div>
+        </div>
+
+        <mat-dialog-actions>
+            <button mat-button [mat-dialog-close]="false">{{ 'clue.close' | transloco }}</button>
+        </mat-dialog-actions>
+    </div>
+</div>

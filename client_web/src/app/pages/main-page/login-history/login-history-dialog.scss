@@ -1,0 +1,31 @@
+.mat-row {
+    height: auto;
+}
+
+.mat-cell {
+    padding: 8px 8px 8px 0;
+}
+
+:host ::ng-deep .mat-dialog-container {
+    background-color: var(--bg-color);
+    .mat-cell,
+    .mat-header-cell {
+        color: var(--primary-text-color);
+        background-color: var(--bg-color);
+    }
+}
+
+h2 {
+    color: black;
+}
+.close-button {
+    background-color: var(--button-bg-color);
+    border: var(--button-bg-color);
+    color: white;
+    &:hover {
+        background-color: var(--button-bg-color-hover);
+    }
+}
+table {
+    width: 100%;
+}

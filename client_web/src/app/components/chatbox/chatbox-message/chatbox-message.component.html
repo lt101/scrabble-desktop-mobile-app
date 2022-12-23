@@ -1,0 +1,7 @@
+<div class="message" [ngClass]="message.cssClass || ''">
+    <p class="message-author">{{ message.playerName }}</p>
+    <p *ngIf="isText" class="message-content">{{ message.content }}</p>
+    <img *ngIf="isGif" src="{{ message.content }}" />
+    <a *ngIf="isFile" href="{{ message.content }}" target="_blank" rel="noopener noreferrer">{{ message.content }}</a>
+    <p *ngIf="message.time">{{ message.time }}</p>
+</div>

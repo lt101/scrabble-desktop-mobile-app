@@ -1,0 +1,147 @@
+mat-form-field {
+    width: 100%;
+    color: black;
+}
+
+emoji-mart {
+    position: relative;
+    bottom: 550px;
+    left: 35%;
+}
+::ng-deep section.emoji-mart {
+    display: block;
+}
+
+.send-button {
+    background-color: var(--button-bg-color);
+    color: white;
+}
+.emoji-picker {
+    position: relative;
+    left: calc(100% - 80px);
+
+    bottom: 60px;
+}
+.toggle-giphy {
+    position: relative;
+    left: calc(100% - 240px);
+}
+
+.toggle-upload {
+    position: relative;
+    left: calc(100% - 460px);
+}
+
+.file-upload > input {
+    display: none;
+}
+
+.file-upload > label {
+    cursor: pointer;
+}
+.file-upload {
+    display: flex;
+    flex-direction: column;
+}
+.upload-container {
+    position: relative;
+    bottom: 200px;
+
+    left: 10px;
+    width: 380px;
+    height: 70px;
+    background-color: white;
+    cursor: default;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        background-color: var(--button-bg-color);
+        color: white;
+        margin-right: 10px;
+    }
+}
+//
+
+ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    li {
+        max-width: 100%;
+    }
+}
+
+.giphy-search {
+    position: relative;
+
+    bottom: 490px;
+    left: 20px;
+    width: 320px;
+    height: 330px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    form {
+        width: 97%;
+    }
+}
+form {
+    input {
+        background-color: white;
+
+        height: 35px;
+        width: 100%;
+        font-family: 'Nunito';
+        font-size: 14px;
+    }
+    button {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        left: 85%;
+        min-width: 0;
+        bottom: 34px;
+        mat-icon {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            bottom: 10px;
+            right: 8px;
+        }
+    }
+}
+
+.giphy-search input {
+    width: 100%;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid var(--button-bg-color);
+    &:focus {
+        border-radius: 3px;
+        border: 1px solid var(--button-bg-color);
+    }
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.gif-result img {
+    cursor: pointer;
+}
+
+.file-input {
+    color: white;
+}
+
+.no-file {
+    color: black;
+}

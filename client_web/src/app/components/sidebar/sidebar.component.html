@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="timer-container">
+        <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="progressSpinnerValue" [strokeWidth]="6" [diameter]="115">
+        </mat-progress-spinner>
+        <img src="./assets/images/clock-bg.png" width="150px" height="150px" />
+        <div id="timer" class="number"></div>
+    </div>
+    <section>
+        <div class="details">
+            <div>
+                <span class="number">{{ reserveSize }}</span>
+                <span>{{ 'sideBar.reserveLetters' | transloco }}</span>
+            </div>
+        </div>
+    </section>
+    <section *ngFor="let player of players; index as i" [ngClass]="{ currentPlayer: currentPlayerId === players[i].playerId }">
+        <div [matTooltip]="statsView(i)">
+            <h3>{{ players[i].playerName }}</h3>
+            <div class="details">
+                <div>
+                    <span class="number">{{ players[i].score }}</span>
+                    <span>points</span>
+                </div>
+                <div>
+                    <span class="number">{{ players[i].easelSize }}</span>
+                    <span>{{ 'sideBar.letters' | transloco }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="easelButtons">
+            <button *ngIf="isObserver" class="easelButton" mat-raised-button color="primary" (click)="observeEasel(players[i].playerId)">
+                {{ 'sideBar.viewEasel' | transloco }}
+            </button>
+            <br />
+            <button
+                *ngIf="isObserver && players[i].playerId.includes('virtual')"
+                class="easelButton"
+                mat-raised-button
+                color="primary"
+                (click)="replacePlayer(players[i].playerId)"
+            >
+                {{ 'sideBar.replace' | transloco }}
+            </button>
+        </div>
+    </section>
+</div>

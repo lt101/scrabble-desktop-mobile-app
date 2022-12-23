@@ -1,0 +1,201 @@
+{
+    "gamePage": {
+        "play": "Jouer!",
+        "exchange": "Échanger",
+        "cancel": "Annuler"
+    },
+    "loginPage": {
+        "connect": "Connectez-vous",
+        "mail": "Adresse mail",
+        "password": "Mot de pass",
+        "noAccount": "Pas de compte ? Inscrivez-vous",
+        "login": "Se connecter",
+        "emptyField": "Erreur, un champ requis est vide",
+        "incorrectPassword": "Mot de passe incorrect",
+        "error": {
+            "userAlreadyConnected": "L'utilisateur est déja connecté",
+            "emailNotAssociated": "Cette adresse mail n'est associée à aucun compte",
+            "connectionError": "Erreur de connexion"
+        }
+    },
+    "mainPage": {
+        "editAvatar": {
+            "editAvatar": "Modifier l'avatar",
+            "avatarChoice": "Choisissez une image de profil",
+            "cancel": "Annuler",
+            "edit": "Modifier",
+            "upload": "Téléverser un avatar"
+        },
+        "editUsername": {
+            "editUsername": "Modifier le pseudonyme",
+            "enterUsername": "Entrez un pseudonyme",
+            "close": "Annuler",
+            "edit": "Modifier"
+        },
+        "gamePlayedHistory": {
+            "gameHistory": "Historique des parties",
+            "startDate": "Date de début",
+            "endDate": "Date de fin",
+            "gameResult": "Résultat de la partie",
+            "Victory": "Victoire",
+            "Defeat": "Défaite",
+            "close": "Fermer"
+        },
+        "logInHistory": {
+            "rank": "Rang :",
+            "level": "Niveau :",
+            "gamesPlayed": "Parties jouées :",
+            "gamesWon": "Parties gagnées :",
+            "gamesLost": "Parties perdues :",
+            "averagePoints": "Moyenne des points :",
+            "averageTime": "Temps moyen :",
+            "connectionHistory": "Historique des connexions",
+            "Connections": "Connexions",
+            "Disconnections": "Déconnexions",
+            "viewConnectionHistory": "Afficher l'historique des connexions",
+            "viewGameHistory": "Afficher l'historique des parties",
+            "logOut": "Se déconnecter",
+            "close": "Fermer"
+        },
+        "options": {
+            "chooseOption": "Choisir une option",
+            "scrabbleMode": {
+                "classic": "Scrabble Classique",
+                "objective": "Scrabble Objectifs",
+                "soloGame": "Jouer une partie en solo",
+                "multiplayerGame": "Jouer une partie en multijoueur",
+                "back": "Retour"
+            }
+        },
+        "gameSettings": {
+            "gameSettings": "Paramètres du jeu",
+            "chooseVisualTheme": "Choisissez un theme visuel :",
+            "Close": "Fermer"
+        },
+        "team": "Équipe 106"
+    },
+    "multiplayerJoinPage": {
+        "joinMultiplayerGame": "Rejoindre une partie multijoueur",
+        "privateGame": "Parties privées",
+        "objectiveGame": "Parties mode objectifs",
+        "noAvailablePrivateGame": "Il n'y a aucune partie privée disponible, pourquoi pas en ",
+        "noObjectiveGames": "Il n'y a aucune partie en mode objectifs disponible, pourquoi pas en ",
+        "createOne": "créer une",
+        "host": "Hôte",
+        "timer": "Minuterie",
+        "dictionary": "Dictionnaire",
+        "action": "Action",
+        "login": "login",
+        "join": "Rejoindre",
+        "players": "Invités",
+        "virtualPlayers": "joueurs virtuels : ",
+        "humanPlayer": "joueurs humains : ",
+        "observers": "observateurs",
+        "publicGames": "Parties publiques",
+        "noAvailablePublicGame": "Il n'y a aucune partie publique que vous pouvez rejoindre, pourquoi pas en",
+        "Observe": "Observer",
+        "password": "Mot de pass",
+        "wrongPassword": "Le mot de passe est invalide ! Veuillez réessayer.",
+        "cancel": "Annuler",
+        "back": "Retour",
+        "messageAborted": "Cette partie n'existe plus, veuillez en sélectionner une autre.",
+        "messageRejected": "L'hôte de la partie a rejeté votre demande, veuillez sélectionner une autre partie.",
+        "messageAccepted": "L'hôte de la partie a accepté votre demande, veuillez patienter pour que l'hôte démarre la partie."
+    },
+    "multiplayerPage": {
+        "multiplayerMode": "Mode multijoueur",
+        "createGame": "Créer une partie",
+        "joinGame": "Rejoindre une partie",
+        "back": "Retour",
+        "visibility": {
+            "private": "Privée",
+            "public": "Publique"
+        }
+    },
+    "multiplayerWaitingPage": {
+        "waitingAnotherPlayer": "En attente d'un autre joueur",
+        "startGame": "Démarrer la partie",
+        "cancel": "Annuler",
+        "wantToJoinGame": "souhaite rejoindre la partie",
+        "accept": "Accepter",
+        "reject": "Rejeter",
+        "joinGame": "a rejoint la partie"
+    },
+    "chatBox": {
+        "chat": "Clavardage",
+        "censoring": "Censurer les mots vulgaires",
+        "message": "Message",
+        "send": "Envoyer",
+        "generalChat": "Chat général",
+        "gameChat": "Chat de la partie",
+        "upload": "Téléverser",
+        "noFile": "Aucun fichier sélectionné",
+        "uploadFile": "Téléverser un fichier"
+    },
+    "clue": {
+        "clue": "Indice",
+        "possiblePlacements": "Voici des placements possibles !",
+        "instant": "Un instant ...",
+        "close": "Fermer",
+        "place": "Placer",
+        "letters": "Lettres:"
+    },
+    "controlPanel": {
+        "zoomIn": "Agrandir",
+        "zoomOut": "Réduire"
+    },
+    "createGame": {
+        "createGame": "Créer une partie",
+        "multiplayerMode": "multijoueur",
+        "opponentLevel": "Niveau de l'adversaire",
+        "timer": "Minuterie",
+        "dictionary": "Dictionnaire",
+        "visibility": "Visibilité",
+        "optionalPassword": "Mot de passe (optionnel)",
+        "back": "Retour",
+        "confirmParameters": "Confirmer les paramètres"
+    },
+    "endGame": {
+        "partyEnded": "Partie terminée",
+        "quit": "Quitter"
+    },
+    "objectives": "Objectifs",
+    "classicMode": "Mode Classique",
+    "passTurn": "Passer",
+    "search": {
+        "searchWord": "Chercher un mot",
+        "close": "Fermer"
+    },
+    "sideBar": {
+        "reserveLetters": "lettres dans la réserve",
+        "letters": "Lettres",
+        "viewEasel": "Voir chevalet",
+        "replace": "Remplcer"
+    },
+    "surrender": {
+        "surrender": "Abandonner",
+        "quit": "Quitter",
+        "abandonGame": "Abandonner cette partie",
+        "abandonMessage": "Voulez-vous vraiment abandonner cette partie ?",
+        "cancel": "Annuler"
+    },
+    "gameMode": {
+        "multiplayer": "Jouer une partie multijoueur"
+    },
+    "back": "Back",
+    "language": {
+        "languageMessage": "Choisissez votre langue",
+        "french": "Français",
+        "english": "Anglais"
+    },
+    "tooltip": {
+        "easel": "Votre chevalet contient vos lettres. Glissez et déposez-les sur la grille pour former des mots, ou échangez-les!",
+        "grid": "La grille contient tous les mots présentement formés. Essayez de toucher une tuile bonus! DL - lettre double; TL - lettre triple; DW - mot double; TW - mot triple",
+        "pass": "Passez votre tour.",
+        "exchange": "Pour échanger des lettres, faites un clique droit sur les lettres que vous voulez échanger sur votre chevalet et appuyez sur le bouton Échanger."
+    },
+    "Pas de grade": "Pas de grade",
+    "Pas de niveau": "Pas de niveau",
+    "Privée": "Privée",
+    "Publique": "Publique"
+}

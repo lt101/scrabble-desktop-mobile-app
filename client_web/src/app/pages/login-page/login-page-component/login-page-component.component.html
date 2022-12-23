@@ -1,0 +1,32 @@
+<mat-card>
+    <div class="logo">
+        <img src="https://bit.ly/3m206ss" width="400" height="80" alt="Logo Scrabble" />
+        <h1>Connectez-vous</h1>
+    </div>
+    <form [formGroup]="paramsForm">
+        <div class="errorMsg" *ngIf="signInError && signInError.length > 0">
+            {{ signInError }}
+        </div>
+        <mat-form-field>
+            <mat-label>Adresse mail</mat-label>
+            <input matInput type="text" id="mailAddress" formControlName="mailAddress" placeholder="exemple@gmail.com" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mot de passe</mat-label>
+            <div class="password">
+                <input
+                    matInput
+                    [type]="show ? 'text' : 'password'"
+                    id="myPassword"
+                    placeholder="Maximum de 10 caractères"
+                    formControlName="password"
+                />
+                <mat-icon class="eye" style="float: right" (click)="showPassword()">remove_red_eye</mat-icon>
+            </div>
+        </mat-form-field>
+    </form>
+    <div class="center">
+        <button mat-button routerLink="/register" class="border">Pas de compte ? Inscrivez-vous</button>
+        <button type="submit" mat-raised-button color="primary" class="button" (click)="logIn()">Se connecter</button>
+    </div>
+</mat-card>

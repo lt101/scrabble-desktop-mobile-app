@@ -1,0 +1,22 @@
+<div class="info-button" matTooltip="{{ 'tooltip.grid' | transloco }}" [matTooltipPosition]="'above'">?</div>
+<div id="grid-container">
+    <canvas
+        id="canvas"
+        #gridCanvas
+        (click)="mouseHitDetect($event)"
+        [ngClass]="{ darkTheme: this.gridDrawingService.isDarkTheme, lightTheme: !this.gridDrawingService.isDarkTheme }"
+    ></canvas>
+    <div id="drag-n-drop-container" #grid cdkDropList [cdkDropListData]="this.gridManagerService.allCases" (cdkDropListDropped)="dropped($event)">
+        <app-letter
+            *ngFor="let card of this.gridManagerService.allCases; index as index"
+            [ngClass]="card.point === 106 ? 'allCases' : 'playedCases'"
+            dropzone
+            id="box-case"
+            [card]="card"
+            [index]="index"
+            cdkDrag
+            [cdkDragDisabled]="card.point === 106"
+        >
+        </app-letter>
+    </div>
+</div>

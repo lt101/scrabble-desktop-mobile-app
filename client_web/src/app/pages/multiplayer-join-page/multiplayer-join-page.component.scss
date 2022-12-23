@@ -1,0 +1,96 @@
+:host {
+    background-image: var(--main-page-bg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.logo {
+    img {
+        content: var(--scrabble-logo);
+    }
+}
+mat-card {
+    width: 60%;
+    min-width: 600px;
+    margin-top: 4rem;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-color: var(--bg-color);
+    h1,
+    h3 {
+        color: var(--primary-text-color);
+        transition: 0.5s;
+    }
+    button {
+        background-color: var(--button-bg-color);
+        &:hover {
+            background-color: var(--button-bg-color-hover);
+        }
+        &:disabled {
+            opacity: 0.4;
+            color: white;
+            background-color: var(--button-bg-color);
+        }
+    }
+}
+
+:host ::ng-deep {
+    .mat-button.mat-primary,
+    .mat-icon-button.mat-primary,
+    .mat-stroked-button.mat-primary {
+        color: white;
+    }
+    th.mat-header-cell,
+    td.mat-cell,
+    td.mat-footer-cell {
+        background-color: var(--bg-color-lighter);
+        color: var(--primary-text-color);
+    }
+}
+
+mat-form-field {
+    display: block;
+}
+
+table {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+mat-spinner {
+    margin: 4rem auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+
+:host .mat-spinner-color::ng-deep circle {
+    stroke: var(--button-bg-color) !important;
+}
+
+button {
+    margin: 0.2rem;
+}
+
+.password {
+    display: flex;
+    align-items: flex-end;
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+.join-request {
+    width: 100%;
+}

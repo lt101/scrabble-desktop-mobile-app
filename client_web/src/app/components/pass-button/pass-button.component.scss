@@ -1,0 +1,16 @@
+.mat-raised-button {
+    min-width: 100% !important;
+}
+#pass-button {
+    background-color: rgb(1, 52, 114);
+    height: 60px;
+    border-radius: 20px;
+    &:disabled {
+        opacity: 0.5;
+        background-color: rgb(1, 52, 114);
+        color: white;
+    }
+    &:hover {
+        background-color: rgb(1, 71, 156);
+    }
+}

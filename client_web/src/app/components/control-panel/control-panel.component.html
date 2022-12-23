@@ -1,0 +1,17 @@
+<div class="control-panel">
+    <div class="buttons">
+        <app-surrender-button id="surrender" class="button-component"></app-surrender-button>
+        <div class="exchange-pass">
+            <app-pass-button class="button-component"></app-pass-button>
+            <app-exchange-button class="button-component"></app-exchange-button>
+            <div class="info-button" matTooltip="{{ 'tooltip.pass' | transloco }}" [matTooltipPosition]="'above'">?</div>
+            <div class="info-button" matTooltip="{{ 'tooltip.exchange' | transloco }}" [matTooltipPosition]="'above'">?</div>
+        </div>
+        <app-play-button class="button-component"></app-play-button>
+        <div class="clue-search">
+            <app-clue-button class="button-component"></app-clue-button>
+            <app-cancel-button class="button-component"></app-cancel-button>
+            <app-search-button class="button-component"></app-search-button>
+        </div>
+    </div>
+</div>

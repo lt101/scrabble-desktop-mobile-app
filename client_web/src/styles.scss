@@ -1,0 +1,189 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+@use './app/pages/material-page/material-page.component.theme' as material-page;
+
+// Plus imports for other components in your app.
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$scrabble-palette: (
+    100: rgb(4, 116, 4),
+    200: rgb(4, 116, 4),
+    300: rgb(4, 116, 4),
+    400: rgb(4, 116, 4),
+    500: rgb(4, 116, 4),
+    600: rgb(4, 116, 4),
+    700: rgb(4, 116, 4),
+    800: rgb(4, 116, 4),
+    900: rgb(4, 116, 4),
+    contrast: (
+        100: white,
+        200: white,
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    ),
+);
+
+$indigo-pink-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: mat.define-palette($scrabble-palette),
+            accent: mat.define-palette(mat.$pink-palette, A200, A100, A400),
+            warn: mat.define-palette(mat.$red-palette),
+        ),
+        typography:
+            mat.define-typography-config(
+                $font-family: 'Nunito',
+            ),
+    )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($indigo-pink-theme);
+@include material-page.theme($indigo-pink-theme);
+
+.indigo-pink-theme {
+    // Nothing to do. This is the default theme
+}
+
+.deeppurple-amber-theme {
+    $deeppurple-amber-theme: mat.define-light-theme(
+        (
+            color: (
+                primary: mat.define-palette(mat.$deep-purple-palette),
+                accent: mat.define-palette(mat.$amber-palette, A200, A100, A400),
+            ),
+        )
+    );
+    @include mat.all-component-colors($deeppurple-amber-theme);
+    @include material-page.theme($deeppurple-amber-theme);
+}
+
+.pink-bluegrey-theme {
+    $pink-bluegrey-theme: mat.define-dark-theme(
+        (
+            color: (
+                primary: mat.define-palette(mat.$pink-palette, 700, 500, 900),
+                accent: mat.define-palette(mat.$blue-grey-palette, A200, A100, A400),
+            ),
+        )
+    );
+    @include mat.all-component-colors($pink-bluegrey-theme);
+    @include material-page.theme($pink-bluegrey-theme);
+}
+
+.purple-green-theme {
+    $purple-green-theme: mat.define-dark-theme(
+        (
+            color: (
+                primary: mat.define-palette(mat.$purple-palette, 700, 500, 800),
+                accent: mat.define-palette(mat.$green-palette, A200, A100, A400),
+            ),
+        )
+    );
+    @include mat.all-component-colors($purple-green-theme);
+    @include material-page.theme($purple-green-theme);
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+// html,
+// body {
+//     height: 100%;
+// }
+// body {
+//     margin: 0;
+//     font-family: Roboto, 'Helvetica Neue', sans-serif;
+// }
+
+// :root {
+//     color-scheme: light;
+//     /* set defaults */
+//     --toolbar-background: var(--toolbar-background-light);
+// }
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         color-scheme: dark;
+//         --toolbar-background: var(--toolbar-background-dark);
+//     }
+// }
+:root {
+    --scrabble-logo: url('./assets/images/scrabble-logo.png');
+}
+[color-scheme='light'] {
+    color-scheme: light;
+    --bg-color: white;
+    --bg-color-lighter: white;
+
+    --primary-text-color: black;
+    --secondary-text-color: white;
+    --secondary-button-bg-color: #0e6ba8;
+    --secondary-button-bg-color-hover: #1584ce;
+
+    --sidebar-bg-color: linear-gradient(0deg, rgba(59, 84, 115, 1) 0%, rgba(1, 52, 114, 1) 100%, rgba(0, 0, 0, 1) 100%);
+    --main-page-button-bg-color: linear-gradient(90deg, rgba(10, 126, 20, 1) 0%, rgba(15, 177, 23, 1) 100%, rgba(0, 0, 0, 1) 100%);
+    --main-page-button-bg-color-hover: linear-gradient(90deg, rgba(13, 161, 26, 1) 0%, rgba(8, 193, 18, 1) 100%, rgba(0, 0, 0, 1) 100%);
+    --button-bg-color: #047404;
+    --button-bg-color-hover: #059d05;
+    --button-bg-color-disabled: rgba(4, 116, 4, 0.2);
+    --game-page-bg-color: white;
+    --main-page-bg: url('./assets/images/light-theme.jpg');
+    --scrabble-logo: url('./assets/images/scrabble-logo-green.png');
+    --game-page-bg: url('./assets/images/bg-game.jpg');
+
+    --current-player-bg-color: #cc0000;
+
+    /* set defaults */
+
+    //--toolbar-background: var(--toolbar-background-light);
+}
+
+[color-scheme='dark'] {
+    color-scheme: dark;
+    --bg-color: #0f0f0f;
+    --bg-color-lighter: #424242;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --secondary-button-bg-color: #3a506b;
+    --secondary-button-bg-color-hover: #4c688b;
+
+    --sidebar-bg-color: #0b132b;
+    --main-page-button-bg-color: linear-gradient(90deg, rgba(2, 16, 57, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%);
+    --main-page-button-bg-color-hover: linear-gradient(90deg, rgb(4, 25, 89) 0%, rgb(19, 19, 19) 100%, rgba(0, 0, 0, 1) 100%);
+    --button-bg-color: #3700b3;
+    --button-bg-color-hover: #4600e9;
+    --button-bg-color-disabled: rgba(55, 0, 179, 0.2);
+    --game-page-bg-color: rgb(27, 27, 27);
+    --main-page-bg: url('./assets/images/dark-theme.jpg');
+    --scrabble-logo: url('./assets/images/scrabble-logo.png');
+    --game-page-bg: url('./assets/images/bg-game-dark.jpg');
+
+    --current-player-bg-color: #bf40bf;
+    //--toolbar-background: var(--toolbar-background-dark);
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif !important;
+}

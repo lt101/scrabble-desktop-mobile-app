@@ -1,0 +1,35 @@
+<div class="container" (click)="handleComponentClick($event)">
+    <div class="left">
+        <div class="logo">
+            <img width="190" height="40" alt="Logo Scrabble" />
+        </div>
+
+        <div class="objectives">
+            <app-objectives *ngIf="this.mode === 'log2990'"></app-objectives>
+            <h3 *ngIf="this.mode !== 'log2990'">{{ 'classicMode' | transloco }}</h3>
+        </div>
+        <div class="toolbar">
+            <app-control-panel class="control-panel"></app-control-panel>
+        </div>
+    </div>
+    <div class="center" drag-and-drop-wrapper cdkDropListGroup>
+        <div class="grid">
+            <app-play-area class="play-area" tabindex="0"></app-play-area>
+        </div>
+        <div class="easel">
+            <app-easel class="easel"></app-easel>
+        </div>
+    </div>
+    <div class="right">
+        <button class="mute" (click)="musicClick()">
+            <div *ngIf="musicOn; else elseBlock"><span class="material-icons"> volume_down </span></div>
+            <ng-template #elseBlock><span class="material-icons"> volume_off </span></ng-template>
+        </button>
+        <div class="sidebar">
+            <app-sidebar class="sidebar"></app-sidebar>
+        </div>
+
+        <!-- <app-chat-button></app-chat-button> -->
+    </div>
+    <app-end-game></app-end-game>
+</div>

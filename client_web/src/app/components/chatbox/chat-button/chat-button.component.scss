@@ -1,0 +1,22 @@
+.button {
+    position: fixed;
+    right: 200px;
+    bottom: 100px;
+    background: #013472;
+    color: white;
+    transition: 0.25s;
+    width: 170px;
+    height: 80px;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    &:hover,
+    &:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+    }
+}
+
+.button:hover {
+    opacity: 1;
+}

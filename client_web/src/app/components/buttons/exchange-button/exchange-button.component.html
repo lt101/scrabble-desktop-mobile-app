@@ -1,0 +1,3 @@
+<button *ngIf="!isObserver" class="exchange-button" mat-raised-button [disabled]="!isCurrentPlayer || !onExchange" (click)="exchange()">
+    {{ 'gamePage.exchange' | transloco }}<mat-icon>loop</mat-icon>
+</button>

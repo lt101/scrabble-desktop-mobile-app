@@ -1,0 +1,47 @@
+.message {
+    opacity: 1;
+    color: white;
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+    margin-bottom: 7px;
+    width: fit-content;
+    max-width: 100%;
+    word-wrap: break-word;
+    .message-author {
+        text-transform: uppercase;
+        font-size: 0.7em;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+
+    .message-content {
+        margin-bottom: 0px;
+        max-width: 100%;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.by-me {
+    background-color: #0085f1;
+    border-radius: 10px 10px 0 10px;
+    margin: 5px 0 5px auto;
+}
+.by-server {
+    background-color: #ff9f43;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.by-other-player {
+    color: black;
+    background-color: #c3c2c5;
+    border-radius: 10px 10px 10px 0;
+    margin: 10px 0;
+}

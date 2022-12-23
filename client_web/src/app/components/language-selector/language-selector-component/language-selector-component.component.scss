@@ -1,0 +1,11 @@
+mat-form-field {
+    background-color: white;
+    min-width: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.mat-form-field-appearance-fill.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+.mat-form-field-appearance-fill.mat-form-field-can-float .mat-input-server:focus + .mat-form-field-label-wrapper .mat-form-field-label {
+    color: red;
+}

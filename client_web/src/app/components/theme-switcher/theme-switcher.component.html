@@ -1,0 +1,12 @@
+<!-- <div class="switcher" [ngClass]="currentScheme">
+    <button *ngFor="let scheme of colorSchemeOptions" [ngClass]="{ active: currentScheme === scheme.value }" (click)="setTheme(scheme.value)">
+        {{ scheme.label }}
+    </button>
+</div> -->
+
+<div class="switch-container">
+    <mat-icon class="night">mode_night</mat-icon>
+    <input type="checkbox" [ngClass]="currentScheme" id="toggle" [checked]="this.currentScheme === 'dark'" (click)="setTheme()" />
+    <label for="toggle"></label>
+    <mat-icon class="light">light_mode</mat-icon>
+</div>

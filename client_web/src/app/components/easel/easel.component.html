@@ -1,0 +1,16 @@
+<!-- <div class="container" (click)="handleComponentClick($event)">
+    <app-letter *ngFor="let card of letters; index as index" [card]="card" [index]="index" cdkDrag></app-letter>
+</div>  -->
+<div class="info-button" matTooltip="{{ 'tooltip.easel' | transloco }}" [matTooltipPosition]="'above'">?</div>
+<div class="container" dropzone cdkDropList [cdkDropListData]="letters" (cdkDropListDropped)="dropped($event)">
+    <app-letter
+        class="tile"
+        *ngFor="let card of letters; index as index"
+        [card]="card"
+        [index]="index"
+        cdkDrag
+        cdkDragPlaceholder
+        [cdkDragDisabled]="isTurn()"
+    >
+    </app-letter>
+</div>
