@@ -4,7 +4,7 @@
 This is a continuation of the web app version of the popular board game Scrabble created in the context of an academic project (see https://github.com/lt101/scrabble-web-app for details). This version includes a multiplayer desktop app built with Electron.js and a mobile app written in Flutter. It implements Socket.io for client-server communication and a REST API for persistance with a MongoDB database.
 <p align="center">
     <img src="images/scrabble-desktop-game-dark.png" width="600">
-<p>
+</p>
     
 ## How To Use
 Before running the application, run the `npm install` script in the *client_web* and *server* directories, as well as *flutter pub get* in *client_mobile* to install necessary dependencies.
@@ -28,7 +28,7 @@ The in-game language is set to French by default. To change the language to Engl
 <p align="center">
     <img src="images/scrabble-desktop-main-page.png" width="400">
     <img src="images/scrabble-desktop-english.png" width="400">
-<p>
+</p>
     
 ## Game modes
 - Classic: This is the classic Scrabble game. Please refer to the official rules to see how it is played.
@@ -54,7 +54,7 @@ Players can chat with other players at all times in the General chat. During a g
 <p align="center">
     <img src="images/scrabble-desktop-gif.png" width="250">
     <img src="images/scrabble-desktop-emoji.png" width="250">
-<p>
+</p>
     
 # Development details
 
