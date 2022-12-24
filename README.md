@@ -2,6 +2,7 @@
 
 ## About
 This is a continuation of the web app version of the popular board game Scrabble created in the context of an academic project (see https://github.com/lt101/scrabble-web-app for details). This version includes a multiplayer desktop app built with Electron.js and a mobile app written in Flutter. It implements Socket.io for client-server communication and a REST API for persistance with a MongoDB database.
+![](images/scrabble-desktop-main-page-dark.png)
 ![](images/scrabble-desktop-game-dark.png)
 
 ## How To Use
@@ -23,6 +24,7 @@ You need to create an account to use the app. If you already have an account, ty
 
 ## Settings
 The in-game language is set to French by default. To change the language to English, click on the cog icon to access the settings. Here, you can choose the language and the theme (dark or light).
+![](images/scrabble-desktop-main-page.png)
 
 ## Game modes
 - Classic: This is the classic Scrabble game. Please refer to the official rules to see how it is played.
@@ -45,7 +47,7 @@ The game ends when a player has used all of his letters AND the reserve is empty
 
 ## Chatting
 Players can chat with other players at all times in the General chat. During a game, they can chat with the other players in the Party chat. Apart from text messages, players can send GIFs, emojis, and even upload pdf and .txt files! 
-
+![](images/scrabble-desktop-gif.png)
 
 # Development details
 
@@ -56,5 +58,8 @@ The desktop app is written with Angular in Typescript. Navigation between pages 
 The mobile app is created with Flutter in Dart. 
 
 ## Server
-The server is an Express server. It implements Socket.io to handle client requests and allow real-time chatting between users. It communicates with a MongoDB database using a REST API.  
+The server is an Express server. It implements Socket.io to handle client requests and allow real-time chatting between users. It communicates with a MongoDB database using a REST API.
+
+## Database
+The database is a MongoDB database. It stores user account information (email, username, password) and player game statistics (number of games played, number of games won, total game time, logins and logouts, etc.).
 
