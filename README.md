@@ -2,9 +2,10 @@
 
 ## About
 This is a continuation of the web app version of the popular board game Scrabble created in the context of an academic project (see https://github.com/lt101/scrabble-web-app for details). This version includes a multiplayer desktop app built with Electron.js and a mobile app written in Flutter. It implements Socket.io for client-server communication and a REST API for persistance with a MongoDB database.
-<img src="images/scrabble-desktop-main-page-dark.png" width="400">
-<img src="images/scrabble-desktop-game-dark.png" width="400">
-
+<p align="center">
+    <img src="images/scrabble-desktop-game-dark.png" width="600">
+<p>
+    
 ## How To Use
 Before running the application, run the `npm install` script in the *client_web* and *server* directories, as well as *flutter pub get* in *client_mobile* to install necessary dependencies.
 
@@ -24,8 +25,11 @@ You need to create an account to use the app. If you already have an account, ty
 
 ## Settings
 The in-game language is set to French by default. To change the language to English, click on the cog icon to access the settings. Here, you can choose the language and the theme (dark or light).  
-<img src="images/scrabble-desktop-main-page.png" width="400">
-
+<p align="center">
+    <img src="images/scrabble-desktop-main-page.png" width="400">
+    <img src="images/scrabble-desktop-main-page-dark.png" width="400">
+<p>
+    
 ## Game modes
 - Classic: This is the classic Scrabble game. Please refer to the official rules to see how it is played.
 - Objectives: This is the Scrabble game with a twist. There are 4 objectives to be completed, each rewarding a certain number of points depending on its difficulty. Once an objective is completed, other players may no longer complete it.
@@ -46,9 +50,11 @@ Players may also ask for a hints by clicking on the light bulb icon.
 The game ends when a player has used all of his letters AND the reserve is empty, OR when each player passes 3 turns in a row.
 
 ## Chatting
-Players can chat with other players at all times in the General chat. During a game, they can chat with the other players in the Party chat. Apart from text messages, players can send GIFs, emojis, and even upload pdf and .txt files!   
-<img src="images/scrabble-desktop-gif.png" width="250">
-
+Players can chat with other players at all times in the General chat. During a game, they can chat with the other players in the Party chat. Apart from text messages, players can send GIFs, emojis, and even upload pdf and .txt files!  
+<p align="center">
+    <img src="images/scrabble-desktop-gif.png" width="250">
+<p>
+    
 # Development details
 
 ## Desktop app
