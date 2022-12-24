@@ -27,7 +27,7 @@ You need to create an account to use the app. If you already have an account, ty
 The in-game language is set to French by default. To change the language to English, click on the cog icon to access the settings. Here, you can choose the language and the theme (dark or light).  
 <p align="center">
     <img src="images/scrabble-desktop-main-page.png" width="400">
-    <img src="images/scrabble-desktop-main-page-dark.png" width="400">
+    <img src="images/scrabble-desktop-english.png" width="400">
 <p>
     
 ## Game modes
@@ -53,6 +53,7 @@ The game ends when a player has used all of his letters AND the reserve is empty
 Players can chat with other players at all times in the General chat. During a game, they can chat with the other players in the Party chat. Apart from text messages, players can send GIFs, emojis, and even upload pdf and .txt files!  
 <p align="center">
     <img src="images/scrabble-desktop-gif.png" width="250">
+    <img src="images/scrabble-desktop-emoji.png" width="250">
 <p>
     
 # Development details
