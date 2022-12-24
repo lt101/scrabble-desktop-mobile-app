@@ -47,7 +47,7 @@ The game ends when a player has used all of his letters AND the reserve is empty
 
 ## Chatting
 Players can chat with other players at all times in the General chat. During a game, they can chat with the other players in the Party chat. Apart from text messages, players can send GIFs, emojis, and even upload pdf and .txt files! 
-![](images/scrabble-desktop-gif.png)
+<img src="images/scrabble-desktop-gif.png" width="50" height="50">
 
 # Development details
 
