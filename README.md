@@ -19,7 +19,7 @@ Before running the application, run the `npm install` script in the *client_web*
     - If you have an Android emulator, you can run the app on the emulator by running the main.dart file in client_mobile > lib.
     
 ## Login and user profile
-You need to create an account to use the app. If you already have an account, type in your email address and password and click on *Se connecter*. If not, click on *Pas de compte? Inscrivez-vous* to create an account. Enter an email address (it doesn't have to exist but must respect a valid email format such as example@gmail.com), a username and a password. Whe you are done, click on *S'inscrire*. Back in the login page, type in your email address and password and click on *Se connecter*. Welcome to Scrabble!
+You need to create an account to use the app. If you already have an account, type in your email address and password and click on *Se connecter*. If not, click on *Pas de compte? Inscrivez-vous* to create an account. Enter an email address (it doesn't have to exist but must respect a valid email format such as example@gmail.com), a username and a password. When you are done, click on *S'inscrire*. Back in the login page, type in your email address and password and click on *Se connecter*. Welcome to Scrabble!
 
 **Note**: For demo purposes, you may want to open the app multiple times to simulate a multiplayer experience.
 
